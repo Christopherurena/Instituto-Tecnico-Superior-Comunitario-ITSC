@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITSC - Instituto Técnico Superior Comunitario</title>
+
+    <link rel="stylesheet" href="estilo.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+
+    <!-- HEADER PRINCIPAL -->
+    <header class="site-header" id="inicio">
+        <div class="brand">
+            <img src="img/logo.png" alt="Logo ITSC" class="logo">
+            <div>
+                <h1>Instituto Técnico Superior Comunitario</h1>
+                <p>Portal institucional oficial</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#sobre">Sobre nosotros</a>
+        <a href="#carreras">Carreras</a>
+        <a href="#admisiones">Admisiones</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Educación técnica de calidad</span>
+            <h2>Formación para el presente y el futuro</h2>
+            <p>
+                Conoce nuestras carreras, proceso de admisión, multimedia institucional y vías de contacto.
+            </p>
+            <a href="#sobre" class="hero-button">Explorar sitio</a>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section id="sobre" class="content-card">
+        <h2>Sobre nosotros</h2>
+
+        <p>
+            El Instituto Técnico Superior Comunitario (ITSC) es una institución educativa comprometida con la formación
+            técnica de calidad, orientada al desarrollo de profesionales competentes.
+        </p>
+
+        <h3>Misión</h3>
+        <p>Formar técnicos superiores con excelencia académica, ética y compromiso social.</p>
+
+        <h3>Visión</h3>
+        <p>Ser una institución líder en educación técnica superior en el país.</p>
+
+        <h3>Valores</h3>
+        <ul>
+            <li>Responsabilidad</li>
+            <li>Compromiso</li>
+            <li>Innovación</li>
+            <li>Respeto</li>
+            <li>Trabajo en equipo</li>
+            <li>Ética profesional</li>
+        </ul>
+    </section>
+
+    <!-- CARRERAS -->
+    <section id="carreras" class="content-card">
+        <h2>Carreras</h2>
+
+        <p>
+            Carreras técnicas enfocadas en tecnología, innovación y desarrollo profesional.
+        </p>
+
+        <ul class="career-grid">
+
+            <li class="career-card">
+                <h3>Desarrollo de Software</h3>
+                <img src="img/software.jpg" alt="Desarrollo de Software">
+                <p>Programación, aplicaciones web y móviles, bases de datos.</p>
+            </li>
+
+            <li class="career-card">
+                <h3>Redes de Información</h3>
+                <img src="img/redes.jpg" alt="Redes de Información">
+                <p>Instalación y mantenimiento de redes informáticas.</p>
+            </li>
+
+            <li class="career-card">
+                <h3>Mecatrónica</h3>
+                <img src="img/mecatronica.jpg" alt="Mecatrónica">
+                <p>Integración de electrónica, mecánica y automatización.</p>
+            </li>
+
+            <li class="career-card">
+                <h3>Diseño Gráfico</h3>
+                <img src="img/diseno.jpg" alt="Diseño Gráfico">
+                <p>Diseño visual, branding y contenido digital.</p>
+            </li>
+
+        </ul>
+
+        <h3>¿Por qué estudiar en el ITSC?</h3>
+        <p>Combina teoría y práctica con alta inserción laboral.</p>
+    </section>
+
+    <!-- ADMISIONES -->
+    <section id="admisiones" class="content-card">
+        <h2>Admisiones</h2>
+
+        <h3>Requisitos</h3>
+        <ul>
+            <li>Cédula de identidad válida</li>
+            <li>Certificado de bachillerato</li>
+            <li>Formulario de solicitud</li>
+            <li>Acta de nacimiento</li>
+            <li>Foto tipo carnet</li>
+        </ul>
+
+        <p>Inicia tu proceso de admisión aquí:</p>
+
+        <button onclick="abrirFormulario()">Iniciar solicitud de admisión</button>
+    </section>
+
+    <!-- MODAL -->
+    <div id="formularioModal">
+        <div class="modal-content">
+
+            <h3>Solicitud de Admisión</h3>
+
+            <form>
+                <label>Nombre completo:</label>
+                <input type="text" required>
+
+                <label>Cédula:</label>
+                <input type="text" id="cedula" maxlength="13" placeholder="000-0000000-0" required>
+
+                <label>Teléfono:</label>
+                <input type="tel" required>
+
+                <label>Fecha de nacimiento:</label>
+                <input type="date" required>
+
+                <button type="submit">Enviar solicitud</button>
+                <button type="button" onclick="cerrarFormulario()">Cerrar</button>
+            </form>
+
+        </div>
+    </div>
+
+    <!-- MULTIMEDIA -->
+    <section id="multimedia" class="content-card">
+        <h2>Multimedia</h2>
+
+        <h3>Imagen institucional</h3>
+        <img src="img/itsc-nueva_14711472_20200904131252-focus-0-0-1024-576-1.jpg" alt="ITSC">
+
+        <h3>Video institucional</h3>
+        <iframe src="https://www.youtube.com/embed/92FDhD_0Bho" title="Video institucional" allowfullscreen>
+        </iframe>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="content-card">
+        <h2>Contáctanos</h2>
+
+        <form class="contact-form">
+
+            <input type="text" placeholder="Nombre completo" required>
+            <input type="email" placeholder="Correo electrónico" required>
+            <input type="tel" placeholder="Teléfono" required>
+            <input type="text" placeholder="Asunto" required>
+            <textarea placeholder="Mensaje" rows="5" required></textarea>
+
+            <button type="submit">Enviar mensaje</button>
+            <button type="reset">Limpiar</button>
+
+        </form>
+    </section>
+
+</body>
+
+</html>
